@@ -4,7 +4,7 @@
 ![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen)
 ![Accuracy](https://img.shields.io/badge/SOC%20Error-%E2%89%A4%205%25-success)
 
-## 📌 Project Overview
+## Project Overview
 This repository contains a robust, discrete **Extended Kalman Filter (EKF)** designed to estimate the State of Charge (SOC) of an LG M50T 21700 Nickel Manganese Cobalt (NMC) lithium-ion cell. 
 
 Standard Coulomb counting accumulates integration drift over time, especially under the highly erratic power demands typical of electric vehicle (EV) accumulators. This estimator solves that drift by utilizing a **1-Resistor-Capacitor (1RC) Equivalent Circuit Model (ECM)** to continuously balance theoretical cell physics against real-world sensor measurements. Validated against aggressive Hybrid Pulse Power Characterization (HPPC) load profiles, the algorithm successfully maintains an SOC tracking error of $\le 5.0\%$.
@@ -23,7 +23,7 @@ The EKF predicts the internal polarization voltage and SOC at each time step $\D
 * **Prediction:** Integrates current and decays $V_1$ based on the time constant $\tau = R_1 \times C_1$.
 * **Update:** Calculates the Kalman Gain to minimize the residual between the measured voltage and the model's predicted voltage.
 
-## 📂 Repository Structure
+## Repository Structure
 ```text
 ev_soc_estimator/
 │
@@ -33,3 +33,12 @@ ev_soc_estimator/
 │── soc_estimator.ipynb
 ├── README.md
 └── requirements.txt
+
+
+## Authors
+
+* **[Sanket Agarwal - 23ME30051]** - *Parameter Extraction, OCV Modeling & System Integration*
+* **[Gokul R - 23ME10029]** - *EKF Implementation & Statistical Validation* 
+
+---
+*Developed as part of the Battery Modeling Project for the course ES60208, Energy Science Department, IIT Kharagpur.*
