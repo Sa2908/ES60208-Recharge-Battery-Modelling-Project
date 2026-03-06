@@ -27,7 +27,7 @@ The EKF predicts the internal polarization voltage and SOC at each time step $\D
 ```text
 ev_soc_estimator/
 │
-├
+│── estimator.py                           # Run this file after installing requirements.txt for visualization of SOC Estimation
 │── cell_D_RPT1_Hybrid_CC-Pulse_0.5C.csv   # Dynamic validation data
 │── ocv_soc_lookup.csv                     # Extracted OCV-SOC mapping
 │── soc_estimator.ipynb
