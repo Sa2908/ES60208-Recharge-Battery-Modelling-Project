@@ -33,7 +33,7 @@ ev_soc_estimator/
 │── soc_estimator.ipynb
 ├── README.md
 └── requirements.txt
-
+```
 
 ## Authors
 
